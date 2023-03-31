@@ -84,6 +84,8 @@ df_antelacion = df_antelacion.to_frame()
 
 fig = go.Figure(data=[go.Histogram(x=df.loc[mask]['antelacion'],nbinsx=20)])
 
+fig.update_layout(yaxis=dict(autorange=True))
+
 fig.update_layout(xaxis=dict(title='Días'), yaxis=dict(title='Cantidad de reservas',range=[0, 15]), 
                   bargap=0.05, bargroupgap=0.2)
 

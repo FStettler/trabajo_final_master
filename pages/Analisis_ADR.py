@@ -122,6 +122,8 @@ def grafico_ocupacion(df_ocupacion):
 
     fig.update_traces(hovertemplate='Fecha: %{x}<br>' +
                                     'Ocupacion: %{y}%<br>')
+    
+    fig.update_layout(yaxis=dict(range=[0,100]))
 
     st.write(fig)
 
